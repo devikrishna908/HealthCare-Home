@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Registration</title>
+<link rel="stylesheet" href="css/staff-style.css">
+<script>
+	function validateForm() {
+		var staffName = document.getElementById("staffName").value;
+		var email = document.getElementById("email").value;
+		var contact = document.getElementById("contact").value;
+		var address = document.getElementById("address").value;
+		var password = document.getElementById("pass").value;
+		var confirmPassword = document.getElementById("cpass").value;
+		var username = document.getElementById("uname").value;
+
+		if (staffName.trim() === "" || email.trim() === "" || contact.trim() === ""
+				|| address.trim() === "" || password.trim() === ""
+				|| confirmPassword.trim() === "" || username.trim() === "") {
+			alert("All the fields are mandatory.");
+			return false;
+		}
+
+		if (!/^\d{10}$/.test(contact)) {
+			alert("Please enter a valid 10-digit contact number.");
+			return false;
+		}
+
+		if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
+			alert("Please enter a valid email address.");
+			return false;
+		}
+
+		if (password.length < 6) {
+			alert("Password must be at least 6 characters long.");
+			return false;
+		}
+
+		if (password !== confirmPassword) {
+			alert("Password and confirm password do not match.");
+			return false;
+		}
+
+		return true;
+	}
+	function cancelAction() {
+		//			alert('Cancel button clicked. Redirecting to homepage...');
+		window.history.back();
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+		<h2>USER REGISTRATION</h2>
+		<div class="form-container">
+			<form name="create" method="post" action="user-add-action.jsp"
+				onsubmit="return validateForm()">
+
+					<label for="staffName">Name Of The User</label> 
+					<input type="text" name="staffName" id="staffName"> 
+										
+					<label for="email">Email ID</label> 
+					<input type="text" name="email" id="email"> 
+					
+					<label for="contact">Contact Number</label> 
+					<input type="text" name="contact" id="contact"> 
+					
+					<label for="address">Address</label>
+					<textarea name="address" id="address"></textarea>
+
+					<label for="uname">User Name</label> 
+					<input type="text" name="uname" id="uname"> 
+					
+					<label for="pass">Password</label>
+					<input type="password" name="pass" id="pass"> 
+					
+					<label for="cpass">Confirm Password</label> 
+					<input type="password" name="cpass" id="cpass">
+
+				<div class="input-button">
+					<input type="submit" value="SAVE" class="insert"> <input
+						type="button" value="CANCEL" class="cancel"
+						onclick="cancelAction()"> <br>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+</body>
+</html>

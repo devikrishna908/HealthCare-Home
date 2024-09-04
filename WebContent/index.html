@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<!-- Link to your CSS file -->
+<link rel="stylesheet" href="css/homestyle.css">
+<script>
+	history.pushState(null, null, document.URL);
+	window.addEventListener('popstate', function() {
+		history.pushState(null, null, document.URL);
+	});
+</script>
+
+</head>
+<body>
+	<header>
+		<nav class="nav">
+			<div class="logo">
+				<img class="icon" alt="logo" src="images/favico.png">
+				<h1>VCare</h1>
+			</div>
+			<ul class="nav-links">
+				<li><a href="login.html">Login</a></li>
+				<li><a href="signup.html">Register</a></li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<div class="top-section">
+		<img class="head" alt="head" src="images/head.png">
+		<h2>Our Prime Services</h2>
+		<div class="image-grid">
+
+			<a href="login.html"> <img src="images/speechtherapy.jpg"
+				alt="Image 1"> <span>Speech Therapy</span>
+			</a> <a href="login.html"> <img src="images/consultation.jpg"
+				alt="Image 2"> <span>Doctor Consultation</span>
+			</a> <a href="login.html"> <img src="images/homenurse.jpg"
+				alt="Image 3"> <span>Home Nurse</span>
+			</a> <a href="login.html"> <img src="images/lab.jpg" alt="Image 4">
+				<span>Lab Test</span>
+			</a> <a href="login.html"> <img src="images/vaccination.jpg"
+				alt="Image 5"> <span>Vaccination</span>
+			</a> <a href="login.html"> <img src="images/physio.jpg" alt="Image 6">
+				<span>Physiotherapy</span>
+			</a> <a href="login.html"> <img src="images/motherbaby.jpg" alt="Image 7"> 
+			<span>Mother & Baby Care</span>
+			</a>
+
+
+		</div>
+	</div>
+
+	<div class="bottom-section">
+		<footer> &copy; 2024 VCare. All rights reserved. </footer>
+	</div>
+</body>
+</html>

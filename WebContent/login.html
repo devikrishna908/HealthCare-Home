@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="css/loginstyle.css">
+<script>
+	function validate() {
+		var userName = document.getElementById("userName").value;
+		var password = document.getElementById("password").value;
+		if(userName.trim()==""||password.trim()==""){
+			alert("UserName and password fields cannot be null");
+			return false;
+		}
+		return true;
+	}
+	window.onload = function() {
+        if (window.history && window.history.pushState) {
+            window.history.pushState('forward', null, './#');
+            window.onpopstate = function(event) {
+                if (event.state === 'forward') {
+                    window.history.pushState('forward', null, './#');
+                } else {
+                    window.location.href = 'index.html'; 
+                }
+            };
+        }
+    };
+    // Disable forward navigation
+    window.history.forward(1);
+    
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Welcome Back To VCare</h1>
+            <p>Experience the convenience and quality of VCare today.
+                Login and take control of your health care journey from the comfort
+                of your home.</p>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-box">
+                <form name="login" method="get" action="login-action.jsp" onsubmit="return validate();">
+                    <br> <br>
+                    <div class="login-head">Enter Your Login Credentials!</div>
+
+                    <div class="input-icon">
+                        <i class="fas fa-user"></i> 
+                        <input type="text" name="username" placeholder="User Name" id ="userName" ><br>
+                    </div>
+                    <div class="input-icon">
+                        <i class="fas fa-lock"></i> 
+                        <input type="password" name="password" placeholder="Password" id="password">
+                    </div>
+                    <br>
+                    <div class="input-button">
+                        <a href="forgot.html">Forgot password?</a><br> 
+                        <input type="submit" value="SIGN IN"> <br> <br>
+                        <div class="signup-container">
+                            Not a user?<a href="signup.html" class="signup">SIGN UP NOW</a><br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

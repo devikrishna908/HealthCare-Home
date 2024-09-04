@@ -1,0 +1,118 @@
+@CHARSET "ISO-8859-1";
+
+h2 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.form-container {
+	text-align: center;
+}
+
+.container {
+	width: 60%; /* Adjust the width of the container as needed */
+	margin: 0 auto; /* Center the container horizontally */
+	margin-top: 100px;
+	background-color: #d3e8bd;
+	/* Set the background color of the container */
+	padding: 50px; /* Add some padding to the container */
+	border-radius: 10px; /* Add rounded corners to the container */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	/* Add a shadow effect to the container */
+}
+
+.form-container label {
+	display: block;
+	text-align: left;
+	font-family: serif;
+	font-size: 12pt;
+	font-weight:bold;
+	margin-top:5px;
+	margin-bottom: 5px;
+	margin-left: 5%; /* Add some space between labels and input boxes */
+}
+
+.form-container input[type="password"] {
+	border-radius: 5px;
+	border-width: 1px;
+	font-family:serif;
+	font-size:12pt;
+	padding-left:5px;
+	width: 90%; /* Set the width of input boxes */
+	margin-bottom: 10px; /* Add some space between input boxes */
+	height: 35px;
+}
+.form-container select {
+    border-radius: 5px;
+    border-width: .5px;
+    font-family: serif;
+    font-size: 12pt;
+    padding-left: 5px;
+    width: 90%; /* Set the width of the select box */
+    margin-bottom: 10px; /* Add some space between input boxes */
+    height: 39px;
+}
+
+.form-container input[type="text"] {
+	border-radius: 5px;
+	border-width: .5px;
+	font-family:serif;
+	font-size:12pt;
+	padding-left:5px;
+	width: 90%; /* Set the width of input boxes */
+	margin-bottom: 10px; /* Add some space between input boxes */
+	height: 35px;
+}
+
+.form-container input[type="date"] {
+	border-radius: 5px;
+	border-width: .5px;
+	font-family:serif;
+	font-size:12pt;
+	padding-left:5px;
+	width: 90%; /* Set the width of input boxes */
+	margin-bottom: 10px; /* Add some space between input boxes */
+	height: 35px;
+}
+
+.form-container textarea {
+	width: 90%; /* Set the width of input boxes */
+	margin-bottom: 10px; /* Add some space between input boxes */
+	padding-left:5px;
+	font-family:serif;
+	font-size:12pt;
+	border-width: .5px;
+	border-radius: 5px;
+}
+
+.form-container textarea {
+	height: 100px; /* Set the height of the textarea */
+}
+
+.input-button {
+	text-align: center;
+	margin-top: 30px; /* Space above the buttons */
+	margin-bottom: 20px;
+}
+
+.input-button input[type="submit"], .input-button input[type="button"] {
+	height: 40px;
+	padding: 8px 20px;
+	font-size: 12pt;
+	border: none;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.input-button input[type="submit"].insert {
+	background-color: #4CAF50;
+	/* Green background for the "CREATE" button */
+	color: white;
+}
+
+.input-button input[type="button"].cancel {
+	background-color: #f44336; /* Red background for the "CANCEL" button */
+	color: white;
+}

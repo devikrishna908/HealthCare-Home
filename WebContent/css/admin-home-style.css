@@ -1,0 +1,76 @@
+@CHARSET "ISO-8859-1";
+
+.navbar {
+	background-color: #cef6b8;
+	height: 40px;
+	padding-bottom: 5px;
+	margin-left: 300px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	justify-content: space-between; /* Align items horizontally */
+	align-items: center;
+}
+
+
+.icon {
+	width: 30px;
+	padding-left: 20px;
+	padding-right: 10px;
+	height: 30px;
+}
+
+.logo {
+	float: left;
+	display: flex;
+	align-items: center;
+}
+
+.logo h1 {
+	margin: 0;
+	padding-left: 10px;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-top: 0;
+}
+
+.sidenav {
+	height: 100%;
+	width: 300px; /* Adjust as needed */
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #cef6b8;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+/* Style the links inside the navigation */
+.sidenav a {
+	padding: 10px 8px 10px 16px;
+	text-decoration: none;
+	font-family: serif;
+	font-size: 16px;
+	color: #000000;
+	display: block;
+}
+
+/* Change the color of links on hover */
+.sidenav a:hover {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.sidenav a.active {
+    font-weight:bold;
+    color: #ffffff;
+}
+
+/* Style the main content */
+.main {
+	margin-left: 300px; /* Same width as the sidebar */
+	padding: 20px;
+}
